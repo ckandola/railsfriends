@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 gem 'rails', '~> 6.0.4'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
@@ -19,6 +18,11 @@ end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'sqlite3', '~> 1.4' 
+end
+
+group :production do
+  gem 'pg', '~> 1.3'   
 end
 
 group :test do
